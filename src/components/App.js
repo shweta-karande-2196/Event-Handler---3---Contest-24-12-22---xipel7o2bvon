@@ -1,32 +1,32 @@
 import React,{useState} from 'react'
 import '../styles/App.css';
 const App = () => {
-let [data, setData] = useState({
-  text:''
-,num:''})
- const handleInput = (event) =>{
+  let [data, SetData]=useState({text:"",num:""})
+
+  const handleInput = (e) =>{
    // use console.log
-  setData({...data,
-           [e.target.name]:e.target.value
-  })
-}
-console.log(data);
-}
+    {
+       Setdata({
+      ...data,
+      [e.target.name]:e.target.value
+    })
+  };
+  }
+
   // do not change id of input elements
   return (
     <div id="main">
       <label htmlFor='text-input'>Text Input:- </label>
-      <input id="text-input" name='text' onChange={handleInput} type={'text'} />
+      <input name="text" id="text-input" type={'text'} onChange={handleInput}/>
 
       <br/>
       <br/>
 
       <label htmlFor='num-input'>Number input</label>
-      <input id="num-input" name='num' onChange={handleInput}  type={'number'} />
+      <input name="num" id="num-input" onClick={handleInput} type={'number'} />
       <br/>
     </div>
   )
 }
-
 
 export default App;
