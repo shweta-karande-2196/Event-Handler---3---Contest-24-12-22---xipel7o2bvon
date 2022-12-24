@@ -1,9 +1,9 @@
-import React from 'react'
+import React,{useState} from 'react'
 import '../styles/App.css';
 const App = () => {
 let [data, setData] = useState({
   text:''
-,num:''}]
+,num:''})
  const handleInput = (event) =>{
    // use console.log
   setData({...data,
@@ -11,6 +11,7 @@ let [data, setData] = useState({
   })
 }
 console.log(data);
+}
   // do not change id of input elements
   return (
     <div id="main">
